@@ -4,15 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <title>ANDRIANARIVOSOA Antema Fiderana | Etudiant à l'EMIT - CV en ligne</title>
-    <meta name="description" content="Découvrez le profil professionnel de ANDRIANARIVOSOA Antema" >
-    <meta name="keywords" content="ANDRIANARIVOSOA Antema Fiderana, CV,1ère année de license, L1 DA2I groupe B ">
+    <title>ANDRIANARIVOSOA Antema Fiderana | Etudiant EMIT - CV</title>
+    <meta name="description" content="CV en ligne de ANDRIANARIVOSOA Antema Fiderana, étudiant en L1 DA2I à l'EMIT Fianarantsoa.">
+    <meta name="keywords" content="Antema Fiderana, EMIT, Informatique, L1 DA2I, Madagascar, CV">
     <meta name="author" content="ANDRIANARIVOSOA Antema Fiderana">
 
-    <meta property="og:title" content="CV de ANDRIANARIVOSOA Antema Fiderana - Etudiant en Informatique">
-    <meta property="og:description" content="Consultez mon parcours professionnel et mes compétences en informatique.">
+    <meta property="og:title" content="CV de ANDRIANARIVOSOA Antema Fiderana">
+    <meta property="og:description" content="Étudiant en Informatique à l'EMIT. Découvrez mes compétences et mon parcours.">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://votre-nom-de-domaine.fr">
 
     <link rel="stylesheet" href="style.css">
 </head>
@@ -20,7 +19,7 @@
     <div class="cv-container">
         <aside class="sidebar">
             <div class="profile-img">
-                <img src="profile-photo.jpg" alt="Portrait de ANDRIANARIVOSOA Antema Fiderana, Etudiant">
+                <img src="profile-photo.jpg" alt="Portrait de ANDRIANARIVOSOA Antema Fiderana">
             </div>
             
             <div class="contact-info">
@@ -31,43 +30,67 @@
 
             <section class="sidebar-section">
                 <h3>PROFIL PROFESSIONNEL</h3>
-                <p>Etudiant à l'EMIT Fianarantsoa</p>
+                <p>Étudiant passionné à l'EMIT Fianarantsoa, spécialisé en Développement Application (DA2I). Motivé par l'apprentissage continu des technologies web et logicielles.</p>
             </section>
 
             <section class="sidebar-section">
-                <h3>MES COMPÉTENCES CLÉS</h3>
-                <ul>
-                    <li>HTML/CSS</li>
-                    <li>Python niveau intermédiaire</li>
-                    <li>Java niveau intermédiaire</li>
-                    <li>Base SQL</li>
+                <h3>COMPÉTENCES CLÉS</h3>
+                <ul id="skills-list">
+                    <li>HTML / CSS</li>
+                    <li>Python (Intermédiaire)</li>
+                    <li>Java (Intermédiaire)</li>
+                    <li>SQL (Bases)</li>
                 </ul>
             </section>
+
+            <button id="theme-toggle">🌙 Mode Sombre</button>
         </aside>
 
         <main class="main-content">
             <header>
                 <h1>ANDRIANARIVOSOA Antema Fiderana</h1>
-                <p style="font-size: 1.5rem; color: #1a428a; font-weight: bold;">Etudiant en Informatique</p>
+                <p class="subtitle">Étudiant en Informatique (L1 DA2I - Groupe B)</p>
+                <div class="matricule-badge">MATRICULE : 318l26</div>
             </header>
-
-            <section class="content-section"> 
 
             <section class="content-section">
                 <h2 class="section-title">FORMATION & DIPLÔMES</h2>
-                <p><strong>2025 - BACC S</strong></p>
-                <p>Lycée Ambohidratrimo</p>
-                <p><strong>Certification :</strong></p>
+                <div class="edu-item">
+                    <p><strong>En cours - Licence en Informatique</strong></p>
+                    <p>EMIT (École de Management et d'Innovation Technologique), Fianarantsoa</p>
+                </div>
+                <div class="edu-item">
+                    <p><strong>2025 - Baccalauréat Série S</strong></p>
+                    <p>Lycée Ambohidratrimo</p>
+                </div>
             </section>
 
             <section class="content-section">
-                <h2 class="section-title">LANGUES ÉTRANGÈRES</h2>
-                <p><strong>Anglais :</strong> Niveau intermédiaire</p>
-                <p><strong>Français :</strong> Niveau intermédiaire</p>
-                <p><strong>Allemand :</strong> Niveau débutant</p>
+                <h2 class="section-title">LANGUES</h2>
+                <div class="lang-grid">
+                    <p><strong>Français :</strong> Intermédiaire</p>
+                    <p><strong>Anglais :</strong> Intermédiaire</p>
+                    <p><strong>Allemand :</strong> Débutant</p>
+                </div>
             </section>
         </main>
     </div>
+
+    <script>
+        const btn = document.getElementById("theme-toggle");
+        
+        btn.addEventListener("click", () => {
+            document.body.classList.toggle("dark-mode");
+            
+            if (document.body.classList.contains("dark-mode")) {
+                btn.textContent = "☀️ Mode Clair";
+            } else {
+                btn.textContent = "🌙 Mode Sombre";
+            }
+        });
+
+        // Log de bienvenue pour la console (très L1 !)
+        console.log("Système de CV chargé pour le matricule 318l26.");
+    </script>
 </body>
 </html>
-
