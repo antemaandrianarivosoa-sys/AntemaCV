@@ -22,19 +22,24 @@ body {
 
 .cv-container {
     display: flex;
-    max-width: 900px;
-    margin: 20px auto;
-    background: var(--main-bg);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    flex-direction: row;
+    width: 100%;        
+    max-width: 1000px;
+    margin: 0 auto;
+    min-height: 100vh;  
 }
 
-.sidebar {
-    width: 300px;
-    background-color: var(--side-bg);
-    color: white;
-    padding: 20px;
+@media (max-width: 768px) {
+    .cv-container {
+        flex-direction: column;
+    }
+    
+    .sidebar {
+        width: 100%; 
+    }
 }
 
+m
 .profile-img img {
     width: 100%;
     border-radius: 5px;
