@@ -3,8 +3,10 @@
     --side-bg: #4a4a4a;
     --main-bg: #ffffff;
     --text: #333;
+    --shadow: 0 10px 25px rgba(0,0,0,0.2);
 }
 
+/* Mode Sombre */
 body.dark-mode {
     --primary: #6ab0ff;
     --side-bg: #1a1a1a;
@@ -12,9 +14,14 @@ body.dark-mode {
     --text: #f0f0f0;
 }
 
+* {
+    box-sizing: border-box; /* Crucial pour éviter que ça dépasse */
+}
+
 body {
     font-family: 'Segoe UI', sans-serif;
     margin: 0;
+    padding: 0;
     background-color: #f0f0f0;
     color: var(--text);
     transition: 0.3s;
@@ -22,61 +29,61 @@ body {
 
 .cv-container {
     display: flex;
-    flex-direction: row;
-    width: 100%;        
-    max-width: 1000px;
-    margin: 0 auto;
-    min-height: 100vh;  
-}
-
-@media (max-width: 768px) {
-    .cv-container {
-        flex-direction: column;
-    }
-    
-    .sidebar {
-        width: 100%; 
-    }
-}
-
-m
-.profile-img img {
+    flex-direction: row; /* Côte à côte sur PC */
     width: 100%;
-    border-radius: 5px;
-    margin-bottom: 15px;
+    max-width: 900px;
+    margin: 0 auto;
+    background: var(--main-bg);
+    box-shadow: var(--shadow);
+    min-height: 100vh;
+}
+
+.sidebar {
+    width: 35%; /* Largeur fixe sur PC */
+    background-color: var(--side-bg);
+    color: white;
+    padding: 20px;
 }
 
 .main-content {
     flex: 1;
-    padding: 40px;
+    padding: 30px;
+}
+
+/* --- AJUSTEMENTS MOBILE (Le secret) --- */
+@media (max-width: 768px) {
+    .cv-container {
+        flex-direction: column; /* Empile les sections verticalement */
+    }
+    .sidebar {
+        width: 100%; /* Prend toute la largeur sur téléphone */
+    }
+    h1 {
+        font-size: 1.8rem; /* Réduit le titre pour qu'il ne soit pas coupé */
+    }
+}
+
+.profile-img img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    background: #ccc; /* Gris en attendant que l'image charge */
 }
 
 .section-title {
     color: var(--primary);
     border-bottom: 2px solid var(--primary);
-    margin-top: 30px;
-}
-
-.matricule-badge {
-    display: inline-block;
-    background: var(--primary);
-    color: white;
-    padding: 5px 15px;
-    border-radius: 20px;
-    font-weight: bold;
-    font-size: 0.9rem;
-    margin-top: 10px;
+    margin-top: 20px;
 }
 
 #theme-toggle {
     width: 100%;
-    padding: 10px;
+    padding: 12px;
     margin-top: 20px;
     cursor: pointer;
     border: none;
     background: var(--primary);
     color: white;
     border-radius: 5px;
+    font-weight: bold;
 }
-
-.sidebar-section h3 { border-bottom: 1px solid #777; padding-bottom: 5px; }
