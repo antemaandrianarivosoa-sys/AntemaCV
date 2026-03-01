@@ -6,7 +6,7 @@
     --shadow: 0 10px 25px rgba(0,0,0,0.2);
 }
 
-/* Mode Sombre */
+
 body.dark-mode {
     --primary: #6ab0ff;
     --side-bg: #1a1a1a;
@@ -15,7 +15,7 @@ body.dark-mode {
 }
 
 * {
-    box-sizing: border-box; /* Crucial pour éviter que ça dépasse */
+    box-sizing: border-box; 
 }
 
 body {
@@ -29,37 +29,43 @@ body {
 
 .cv-container {
     display: flex;
-    flex-direction: row; /* Côte à côte sur PC */
+    flex-wrap: nowrap; 
     width: 100%;
-    max-width: 900px;
+    max-width: 1000px;
     margin: 0 auto;
     background: var(--main-bg);
-    box-shadow: var(--shadow);
     min-height: 100vh;
 }
 
+
 .sidebar {
-    width: 35%; /* Largeur fixe sur PC */
+    width: 35%; 
+    min-width: 130px;
     background-color: var(--side-bg);
     color: white;
-    padding: 20px;
+    padding: 15px;
 }
 
 .main-content {
-    flex: 1;
-    padding: 30px;
+    flex: 1; 
+    padding: 20px;
+    word-wrap: break-word; 
+
+@media (max-width: 600px) {
+    
 }
 
-/* --- AJUSTEMENTS MOBILE (Le secret) --- */
+
+
 @media (max-width: 768px) {
     .cv-container {
-        flex-direction: column; /* Empile les sections verticalement */
+        flex-direction: column; 
     }
     .sidebar {
-        width: 100%; /* Prend toute la largeur sur téléphone */
+        width: 100%; 
     }
     h1 {
-        font-size: 1.8rem; /* Réduit le titre pour qu'il ne soit pas coupé */
+        font-size: 1.8rem; 
     }
 }
 
@@ -67,7 +73,7 @@ body {
     width: 100%;
     height: auto;
     border-radius: 5px;
-    background: #ccc; /* Gris en attendant que l'image charge */
+    background: #ccc; 
 }
 
 .section-title {
