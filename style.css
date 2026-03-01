@@ -1,75 +1,77 @@
+:root {
+    --primary: #1a428a;
+    --side-bg: #4a4a4a;
+    --main-bg: #ffffff;
+    --text: #333;
+}
+
+body.dark-mode {
+    --primary: #6ab0ff;
+    --side-bg: #1a1a1a;
+    --main-bg: #2d2d2d;
+    --text: #f0f0f0;
+}
+
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
     background-color: #f0f0f0;
-    display: flex;
-    justify-content: center;
-    padding: 20px;
+    color: var(--text);
+    transition: 0.3s;
 }
 
 .cv-container {
-    width: 800px;
-    background: white;
     display: flex;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    max-width: 900px;
+    margin: 20px auto;
+    background: var(--main-bg);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
 }
 
-/* Sidebar Styling */
 .sidebar {
-    width: 35%;
-    background-color: #6e6e6e; /* Gray background */
+    width: 300px;
+    background-color: var(--side-bg);
     color: white;
-    padding: 0;
-}
-
-.profile-img {
-    background-color: #1a428a; /* Dark Blue top */
-    padding: 30px;
-    text-align: center;
-}
-
-.profile-img img {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    object-fit: cover;
-}
-
-.sidebar-section, .contact-info {
     padding: 20px;
 }
 
-h3 {
-    border-bottom: 1px solid white;
-    padding-bottom: 5px;
-    font-size: 1.1rem;
+.profile-img img {
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 15px;
 }
 
-/* Main Content Styling */
 .main-content {
-    width: 65%;
+    flex: 1;
     padding: 40px;
 }
 
-h1 {
-    font-size: 3rem;
-    margin-top: 0;
-    color: #333;
-}
-
 .section-title {
-    color: #1a428a;
-    border-bottom: 2px solid #1a428a;
-    font-size: 1.2rem;
+    color: var(--primary);
+    border-bottom: 2px solid var(--primary);
     margin-top: 30px;
 }
 
-.job {
-    margin-top: 15px;
-}
-
-.date {
-    display: block;
+.matricule-badge {
+    display: inline-block;
+    background: var(--primary);
+    color: white;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-weight: bold;
     font-size: 0.9rem;
-    color: #666;
+    margin-top: 10px;
 }
 
+#theme-toggle {
+    width: 100%;
+    padding: 10px;
+    margin-top: 20px;
+    cursor: pointer;
+    border: none;
+    background: var(--primary);
+    color: white;
+    border-radius: 5px;
+}
+
+.sidebar-section h3 { border-bottom: 1px solid #777; padding-bottom: 5px; }
