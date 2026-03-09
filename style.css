@@ -1,6 +1,6 @@
 :root {
     --primary: #1a428a;
-    --sidebar-bg: #2f2f2f;
+    --sidebar-bg: #f5f5f5;
     --main-bg: #ffffff;
     --text: #333;
 }
@@ -32,55 +32,67 @@ body {
 /* CONTAINER PRINCIPAL */
 .cv-container {
     display: flex;
-    flex-wrap: wrap; /* correction portrait */
-    max-width: 1000px;
+    max-width: 900px;
     margin: 40px auto;
     background: var(--main-bg);
-    border-radius: 10px;
+    border-radius: 12px;
     overflow: hidden;
-    box-shadow: 0 15px 40px rgba(0,0,0,0.15);
-    min-height: 100dvh; /* correction mobile */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
 }
 
 /* SIDEBAR */
 .sidebar {
-    width: 35%;
-    min-width: 250px;
+    width: 30%;
+    min-width: 220px;
     background: var(--sidebar-bg);
-    color: white;
-    padding: 25px;
+    color: var(--text);
+    padding: 30px 20px;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    border-right: 1px solid #ddd;
 }
 
 .profile-img img {
-    width: 100%;
-    border-radius: 10px;
-    margin-bottom: 15px;
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    border: 3px solid var(--primary);
 }
 
 .name {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
     font-weight: bold;
+    text-align: center;
+    margin-bottom: 5px;
 }
 
 .role {
+    font-size: 0.9rem;
+    color: var(--primary);
     margin-bottom: 20px;
-    opacity: 0.8;
+    text-align: center;
 }
 
 .sidebar h3 {
-    margin-top: 20px;
+    margin-top: 25px;
     margin-bottom: 10px;
+    font-size: 1rem;
     color: var(--primary);
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 .sidebar ul {
-    padding-left: 20px;
+    padding-left: 15px;
+    font-size: 0.9rem;
+    line-height: 1.6;
 }
 
 .sidebar a {
-    color: white;
+    color: var(--primary);
     text-decoration: none;
 }
 
@@ -91,47 +103,56 @@ body {
 /* MAIN */
 .main-content {
     flex: 1;
-    padding: 35px;
+    padding: 40px;
 }
 
 header h1 {
-    font-size: 1.8rem;
+    font-size: 2rem;
+    margin-bottom: 5px;
+    color: var(--primary);
 }
 
 .subtitle {
     color: gray;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
+    font-size: 1rem;
 }
 
 .badge {
     background: var(--primary);
     color: white;
-    padding: 5px 12px;
+    padding: 6px 14px;
     border-radius: 20px;
     font-size: 0.8rem;
+    display: inline-block;
+    margin-bottom: 10px;
 }
 
 section {
-    margin-top: 30px;
+    margin-top: 35px;
 }
 
 section h2 {
     border-bottom: 2px solid var(--primary);
-    padding-bottom: 5px;
-    margin-bottom: 15px;
+    padding-bottom: 6px;
+    margin-bottom: 20px;
+    font-size: 1.2rem;
     color: var(--primary);
+    text-transform: uppercase;
 }
 
 .card {
-    background: #f4f4f4;
-    padding: 15px;
+    background: #fafafa;
+    padding: 18px;
     border-radius: 8px;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
     transition: 0.3s;
+    border: 1px solid #eee;
 }
 
 body.dark-mode .card {
     background: #3a3a3a;
+    border: 1px solid #555;
 }
 
 .card:hover {
@@ -148,10 +169,11 @@ body.dark-mode .card {
     border-radius: 6px;
     cursor: pointer;
     font-weight: bold;
+    transition: 0.3s;
 }
 
 #theme-toggle:hover {
-    opacity: 0.9;
+    opacity: 0.85;
 }
 
 /* RESPONSIVE */
@@ -162,7 +184,8 @@ body.dark-mode .card {
 
     .sidebar {
         width: 100%;
-        min-width: auto;
+        border-right: none;
+        border-bottom: 1px solid #ddd;
     }
 
     .main-content {
