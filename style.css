@@ -1,1 +1,313 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    padding: 20px;
+    color: #333;
+}
+
+.cv-container {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    max-width: 1000px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+}
+
+/* Sidebar */
+.sidebar {
+    background: linear-gradient(180deg, #2c3e50 0%, #1a252f 100%);
+    color: white;
+    padding: 30px 20px;
+}
+
+.profile-img {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 15px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 3px solid rgba(255,255,255,0.3);
+}
+
+.profile-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.name {
+    text-align: center;
+    font-size: 1.5em;
+    margin-bottom: 5px;
+}
+
+.role {
+    text-align: center;
+    color: #3498db;
+    font-size: 0.9em;
+    margin-bottom: 20px;
+}
+
+.contact-info {
+    background: rgba(255,255,255,0.1);
+    padding: 12px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    font-size: 0.85em;
+}
+
+.contact-info p {
+    margin: 6px 0;
+}
+
+.contact-info a {
+    color: #ecf0f1;
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    color: #3498db;
+}
+
+.sidebar section {
+    margin-bottom: 20px;
+}
+
+.sidebar h3 {
+    color: #3498db;
+    font-size: 1em;
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid rgba(52, 152, 219, 0.3);
+}
+
+.sidebar p {
+    font-size: 0.85em;
+    line-height: 1.5;
+    color: #bdc3c7;
+    margin-bottom: 8px;
+}
+
+.sidebar ul {
+    list-style: none;
+}
+
+.sidebar ul li {
+    padding: 4px 0;
+    font-size: 0.85em;
+    color: #ecf0f1;
+    padding-left: 12px;
+    position: relative;
+}
+
+.sidebar ul li:before {
+    content: "▹";
+    position: absolute;
+    left: 0;
+    color: #3498db;
+}
+
+/* Liste certifications sidebar */
+.cert-list {
+    list-style: none !important;
+}
+
+.cert-list li {
+    padding: 0 !important;
+    margin-bottom: 8px;
+}
+
+.cert-list li:before {
+    display: none;
+}
+
+.cert-list a {
+    display: block;
+    color: #ecf0f1;
+    text-decoration: none;
+    padding: 8px 12px;
+    background: rgba(52, 152, 219, 0.2);
+    border-radius: 6px;
+    border: 1px solid rgba(52, 152, 219, 0.3);
+    transition: all 0.3s;
+    font-size: 0.9em;
+}
+
+.cert-list a:hover {
+    background: #3498db;
+    color: white;
+    transform: translateX(5px);
+}
+
+#theme-toggle {
+    width: 100%;
+    padding: 10px;
+    margin-top: 15px;
+    background: rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.2);
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.85em;
+    transition: all 0.3s;
+}
+
+#theme-toggle:hover {
+    background: rgba(255,255,255,0.2);
+}
+
+/* Main Content */
+.main-content {
+    padding: 35px;
+    background: #f8f9fa;
+}
+
+header {
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 3px solid #3498db;
+}
+
+header h1 {
+    font-size: 2em;
+    color: #2c3e50;
+    margin-bottom: 8px;
+}
+
+.subtitle {
+    font-size: 1.1em;
+    color: #7f8c8d;
+    margin-bottom: 8px;
+}
+
+.badge {
+    display: inline-block;
+    background: #3498db;
+    color: white;
+    padding: 4px 12px;
+    border-radius: 15px;
+    font-size: 0.8em;
+}
+
+.main-content section {
+    margin-bottom: 25px;
+}
+
+.main-content h2 {
+    color: #2c3e50;
+    font-size: 1.3em;
+    margin-bottom: 15px;
+}
+
+.card {
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 12px;
+    border-left: 3px solid #3498db;
+}
+
+.card strong {
+    color: #2c3e50;
+    display: block;
+    margin-bottom: 4px;
+}
+
+.card p {
+    color: #7f8c8d;
+    font-size: 0.9em;
+}
+
+/* Certifications simples */
+.certs-simple {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.cert-link {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 15px;
+    background: white;
+    border-radius: 8px;
+    text-decoration: none;
+    color: #2c3e50;
+    border: 1px solid #e0e0e0;
+    transition: all 0.3s;
+}
+
+.cert-link:hover {
+    border-color: #3498db;
+    transform: translateX(5px);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.cert-icon {
+    font-size: 1.5em;
+}
+
+.cert-name {
+    flex: 1;
+    font-weight: 600;
+}
+
+.cert-arrow {
+    color: #3498db;
+    font-size: 1.2em;
+}
+
+/* Dark Mode */
+.dark-mode {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+}
+
+.dark-mode .cv-container {
+    background: #1e1e1e;
+}
+
+.dark-mode .main-content {
+    background: #121212;
+    color: #ecf0f1;
+}
+
+.dark-mode header h1,
+.dark-mode .main-content h2,
+.dark-mode .card strong {
+    color: #ecf0f1;
+}
+
+.dark-mode .subtitle,
+.dark-mode .card p {
+    color: #bdc3c7;
+}
+
+.dark-mode .card,
+.dark-mode .cert-link {
+    background: #2d2d2d;
+    border-color: #444;
+    color: #ecf0f1;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .cv-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .main-content {
+        padding: 20px;
+    }
+}
 
